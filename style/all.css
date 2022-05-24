@@ -58,13 +58,15 @@ a {
   width: 100%;
   top: 0;
   z-index: 1;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 .nav-ls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 30%;
+  width: 40%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -179,6 +181,11 @@ a {
   margin: 0 10%;
 }
 
+.member-body img {
+  -webkit-box-shadow: 10px 10px rgba(51, 51, 51, 0.6);
+          box-shadow: 10px 10px rgba(51, 51, 51, 0.6);
+}
+
 .member-ls {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,22 +251,86 @@ a {
           transform: translateY(-70%);
 }
 
-@media screen and (min-width: 768px) {
-  .nav {
-    font-size: 18px;
-    text-transform: capitalize;
+@media screen and (max-width: 1024px) {
+  .nav-ls {
+    width: 70%;
+    font-size: 16px;
+  }
+  .about-body {
+    width: 40%;
+  }
+  .member-ls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .member-item {
+    width: 33.33%;
+    padding: 10px;
+  }
+  .linebot-head {
+    left: 15%;
+    width: 35%;
+  }
+  .linebot-head .title {
+    padding: 15px 0 35px;
+  }
+  .linebot-body {
+    left: 60%;
+    top: 20%;
+    height: 60%;
   }
 }
 
-@media screen and (width: 768px) {
+@media screen and (max-width: 414px) {
   .nav-ls {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    width: 80%;
+    font-size: 12px;
   }
-  .nav-item {
-    width: 100vw;
+  .nav-logo {
+    background-color: transparent;
+    position: static;
+    height: 40px;
+  }
+  .title {
+    font-size: 24px;
+    color: #fff;
+    padding: 15px 15px 15px 25px;
+    text-transform: uppercase;
+  }
+  .about-head {
+    top: 30%;
+  }
+  .about-body {
+    top: 35%;
+    overflow: scroll;
+  }
+  .about-body .about-text {
+    top: 25px;
+    font-size: 12px;
+    padding: 20px 25px 15px;
+  }
+  .linebot-head {
+    height: 50%;
+  }
+  .linebot-head .title {
+    padding: 15px 0 15px;
+  }
+  .linebot-head .linebot-text {
+    padding: 0;
+    height: 50%;
+    overflow: scroll;
+  }
+  .linebot-head i {
+    font-size: 24px;
+  }
+  .linebot-body {
+    top: 20%;
+    left: 55%;
+    width: 30%;
+    height: 40%;
   }
 }
 /*# sourceMappingURL=all.css.map */
