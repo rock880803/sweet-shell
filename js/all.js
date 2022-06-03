@@ -1,54 +1,44 @@
-
 const $isMobile = $(window).width();
-const $btn = $('.btn');
-const $Btn1 = $('#Btn1');
-const $Btn2 = $('#Btn2');
-const $Btn3 = $('#Btn3');
-const $Btn4 = $('#Btn4');
+const $Slide = $('#Slide');
 const $SlideLs = $('#SlideLs');
-const $navItem = $('.nav-item > a');
-const $imgScroll = $('.linebot-body > .img-resp');
+const $NavItem = $('.nav-item > a');
+const counts = {
+    name1: "訊息傳送",
+    data1: "10629",
+    name2: "加入好友",
+    data2: "610",
+    name3: "活躍聊天室",
+    data3: "958",
+    name4: "接收的訊息",
+    data4: "8341",
+    name5: "傳送的訊息",
+    data5: "4566",
+};
 
-$btn.find('.btn-item').eq(0).addClass('js-nav-btn');
+Object.keys(counts).forEach(function(key){
+    $(`[data-set=${key}]`).text(counts[key])
+});
 
-$('#Next').click(function(){
+$NavItem.parent().eq(0).addClass('js-nav-btn');
+
+$NavItem.click(function () {
+    $(this).parent().addClass('js-nav-btn').siblings().removeClass('js-nav-btn');
+    $SlideLs.css({
+        top: - $(this).parent().index() * 100 + '%',
+    })
+});
+
+
+$('#Next').click(function () {
     $SlideLs.css({
         top: '-100%'
     });
-    $btn.find('.btn-item').eq(1).addClass('js-nav-btn')
-    .siblings().removeClass('js-nav-btn');
+    $NavItem.parent().eq(1).addClass('js-nav-btn')
+        .siblings().removeClass('js-nav-btn');
 });
 
-
-$Btn1.click(function () {
-    $SlideLs.css({
-        top: 0
-    });
-    $btn.find('.btn-item').eq(0).addClass('js-nav-btn')
-    .siblings().removeClass('js-nav-btn');
-    
-});
-$Btn2.click(function () {
-    $SlideLs.css({
-        top: '-100%'
-    })
-    $btn.find('.btn-item').eq(1).addClass('js-nav-btn')
-    .siblings().removeClass('js-nav-btn');
-});
-$Btn3.click(function () {
-    $SlideLs.css({
-        top: '-200%'
-    })
-    $btn.find('.btn-item').eq(2).addClass('js-nav-btn')
-    .siblings().removeClass('js-nav-btn');
-});
-$Btn4.click(function () {
-    $SlideLs.css({
-        top: '-300%'
-    })
-    $btn.find('.btn-item').eq(3).addClass('js-nav-btn')
-    .siblings().removeClass('js-nav-btn');
+$Slide.scroll(function () {
+    console.log($(this).scrollTop());
 });
 
-$imgScroll.scrollTop()>=200 ? $imgScroll.addClass('js-img-scroll') : $imgScroll.removeClass('js-img-scroll')
 

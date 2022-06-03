@@ -78,13 +78,14 @@ a {
 }
 
 .nav-item > a {
-  color: #eee;
+  color: #bbb;
 }
 
 .btn {
   position: absolute;
   right: 0;
   top: 40%;
+  z-index: 1;
 }
 
 .btn .btn-ls {
@@ -92,6 +93,7 @@ a {
 }
 
 .btn .btn-ls .btn-item {
+  display: block;
   margin: 15px;
   width: 15px;
   height: 15px;
@@ -304,6 +306,7 @@ a {
   color: #fff;
   text-align: justify;
   line-height: 1.6;
+  margin-bottom: 10%;
 }
 
 .linebot-head i {
@@ -331,8 +334,65 @@ a {
   transition: transform 3s, -webkit-transform 3s;
 }
 
-.js-nav-btn {
-  background-color: #fff;
+.linebot-other {
+  position: absolute;
+  top: 100%;
+  width: 60%;
+  height: 100%;
+  margin: 10% 20%;
+}
+
+.linebot-other .title {
+  margin-top: 20%;
+}
+
+.ball-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 24px;
+  margin: 3%;
+}
+
+.data-ball {
+  background-color: #2e1842;
+  width: 44%;
+  height: 10vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 3%;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.data-ball:hover {
+  background-color: #663792;
+}
+
+.data-ball .data {
+  color: #2e1842;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+  font-size: 36px;
+}
+
+.data-ball:hover .data {
+  color: #fff;
+}
+
+.ball1 {
+  width: 100%;
+}
+
+.js-nav-btn a {
+  color: #fff;
 }
 
 .js-img-scroll {
@@ -377,6 +437,23 @@ a {
     left: 65%;
     top: 20%;
     height: 35%;
+  }
+  .linebot-other {
+    margin: 0 20%;
+    width: 60%;
+  }
+  .linebot-other .title {
+    margin-top: 30%;
+  }
+  .ball-group {
+    font-size: 24px;
+  }
+  .ball-group .data-ball {
+    height: 25%;
+    padding: 8%;
+  }
+  .ball-group .data {
+    font-size: 32px;
   }
 }
 
@@ -451,6 +528,23 @@ a {
     left: 55%;
     width: 30%;
     height: 40%;
+  }
+  .linebot-other {
+    margin: 0 10%;
+    width: 80%;
+  }
+  .linebot-other .title {
+    margin-top: 50%;
+  }
+  .ball-group {
+    font-size: 14px;
+  }
+  .ball-group .data-ball {
+    height: 25%;
+    padding: 8%;
+  }
+  .ball-group .data {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=all.css.map */

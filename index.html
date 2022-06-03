@@ -15,32 +15,33 @@
 </head>
 
 <body>
-    <div class="slide mask">
+    <div class="slide mask" id="Slide">
         <nav class="nav align">
             <ul class="nav-ls">
                 <li class="nav-item">
-                    <a id="Btn1" href="javascript:;"> <img class="img-resp" src="./images/SS-icon.png"
-                            style="position: relative;top: 5px;height: 36px; weight: 36px;" alt="Sweet Shell">home</a>
+                    <a href="javascript:;">
+                        <img class="img-resp" src="./images/SS-icon.png"
+                            style="position: relative ;top: 5px;height: 36px; width: 36px;" alt="Sweet Shell">home</a>
                 </li>
                 <li class="nav-item">
-                    <a id="Btn2" href="javascript:;">about</a>
+                    <a href="javascript:;">about</a>
                 </li>
                 <li class="nav-item">
-                    <a id="Btn3" href="javascript:;">member</a>
+                    <a href="javascript:;">member</a>
                 </li>
                 <li class="nav-item">
-                    <a id="Btn4" href="javascript:;">service</a>
+                    <a href="javascript:;">service</a>
                 </li>
             </ul>
         </nav>
-        <div class="btn">
+        <!-- <div class="btn">
             <ul class="btn-ls">
-                <li class="btn-item"></li>
-                <li class="btn-item"></li>
-                <li class="btn-item"></li>
-                <li class="btn-item"></li>
+                <li class="btn-item"><a href="javascript:;" id="Btn1"></a></li>
+                <li class="btn-item"><a href="javascript:;" id="Btn2"></a></li>
+                <li class="btn-item"><a href="javascript:;" id="Btn3"></a></li>
+                <li class="btn-item"><a href="javascript:;" id="Btn4"></a></li>
             </ul>
-        </div>
+        </div> -->
         <div class="slide-ls" id="SlideLs">
             <section class="slide-item home-item">
                 <div class="cover">
@@ -112,11 +113,32 @@
                     <h2 class="linebot-title title">line-bot</h2>
                     <p class="linebot-text">
                         透過Line聊天機器人，可以將相同的流程建立成一套程序。<br>如此一來，每位使用者皆可在第一時間完成手續。<br>而遇到較複雜的問題，再透過其它服務的同學一對一回覆。 </p>
-                    <i class="fa-brands fa-line"></i>
-                    <i class="fa-solid fa-robot"></i>
+                    <!-- <i class="fa-brands fa-line"></i>
+                    <i class="fa-solid fa-robot"></i> -->
+                    <a href="https://lin.ee/11GRe8t">
+                        <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="36"
+                            border="0">
+                    </a>
+
                 </div>
                 <div class="slide-body linebot-body mask">
                     <img class="img-resp" src="./images/linebot.jpg" alt="">
+                </div>
+                <div class="linebot-other">
+                    <h2 class="title align">analysis</h2>
+                    <br>
+                    <div class="ball-group">
+                        <div class="data-ball ball1 align"><span data-set="name1"></span><br><span
+                                data-set="data1" class="data"></span></div>
+                        <div class="data-ball ball2 align"><span data-set="name2"></span><br><span
+                                data-set="data2" class="data"></span></div>
+                        <div class="data-ball ball3 align"><span data-set="name3"></span><br><span
+                                data-set="data3" class="data"></span></div>
+                        <div class="data-ball ball4 align"><span data-set="name4"></span><br><span
+                                data-set="data4" class="data"></span></div>
+                        <div class="data-ball ball5 align"><span data-set="name5"></span><br><span
+                                data-set="data5" class="data"></span></div>
+                    </div>
                 </div>
             </section>
 
