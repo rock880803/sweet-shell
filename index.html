@@ -18,27 +18,22 @@
     <div class="slide mask">
         <nav class="nav align">
             <ul class="nav-ls">
-                <li class="nav-item nav-logo align">
-                    <a href="javascript:;">
-                        <img class="img-resp" src="./images/SS-icon.png" style="height: 36px; weight: 36px;"
-                            alt="Sweet Shell">
-                    </a>
+                <li class="nav-item">
+                    <a class="btn" id="Btn1" href="javascript:;"> <img class="img-resp" src="./images/SS-icon.png" style="position: relative;top: 5px;height: 36px; weight: 36px;"
+                            alt="Sweet Shell">home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="javascript:;">home</a>
+                    <a class="btn" id="Btn2" href="javascript:;">about</a>
                 </li>
                 <li class="nav-item">
-                    <a href="javascript:;">story</a>
+                    <a class="btn" id="Btn3" href="javascript:;">member</a>
                 </li>
                 <li class="nav-item">
-                    <a href="javascript:;">service</a>
-                </li>
-                <li class="nav-item">
-                    <a href="javascript:;">about us</a>
+                    <a class="btn" id="Btn4" href="javascript:;">service</a>
                 </li>
             </ul>
         </nav>
-        <div class="slide-ls">
+        <div class="slide-ls" id="SlideLs">
             <section class="slide-item home-item">
                 <div class="preload-img">
 
@@ -52,11 +47,8 @@
                 </div>
                 <div class="slide-body about-body">
                     <h2 class="about-title title">about</h2>
-                    <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut
-                        labore et dolore magna aliqua. Arcu non odio euismod lacinia at quis. Hac habitasse platea
-                        dictumst quisque sagittis. Accumsan lacus vel facilisis volutpat est velit. Facilisi cras
-                        fermentum odio eu feugiat.</p>
+                    <p class="about-text">小蛤蜊取自諧音「隔離」，但蛤蜊和隔離之間最大的不同是，隔離是將兩者區分開，而蛤蜊卻因為外層有保護殼，具有呵護的意思。<br>
+                    小蛤蜊創建於5/5，並於5/8正式發布，目的就是為了讓所有住宿生都能夠在防疫上得到最大的幫助。</p>
                 </div>
             </section>
             <section class="slide-item">
@@ -66,28 +58,40 @@
                 <div class="slide-body member-body">
                     <ul class="member-ls">
                         <li class="member-item">
-                            <img class="img-resp" src="./images/member1.jpg" alt="">
-                            <h2 class="member-name align">Toast</h2>
+                            <!-- <a class="img-resp" href="./images/member1.jpg" data-fancybox="group1" data-caption="member" > -->
+                                <img class="img-resp" src="./images/member1.jpg" alt="">
+                                <h2 class="member-name align">Toast</h2>
+                            </a>
                         </li>
                         <li class="member-item">
-                            <img class="img-resp" src="./images/member2.jpg" alt="">
-                            <h2 class="member-name align">Toast</h2>
+                            <!-- <a class="img-resp" href="./images/member2.jpg" data-fancybox="group1" data-caption="member" > -->
+                                <img class="img-resp" src="./images/member2.jpg" alt="">
+                                <h2 class="member-name align">Alan</h2>
+                            </a>
                         </li>
                         <li class="member-item">
-                            <img class="img-resp" src="./images/member3.jpg" alt="">
-                            <h2 class="member-name align">Toast</h2>
+                            <!-- <a class="img-resp" href="./images/member3.jpg" data-fancybox="group1" data-caption="member" > -->
+                                <img class="img-resp" src="./images/member3.jpg" alt="">
+                                <h2 class="member-name align">Claire</h2>
+                            </a>
                         </li>
                         <li class="member-item">
-                            <img class="img-resp" src="./images/member4.jpg" alt="">
-                            <h2 class="member-name align">Toast</h2>
+                            <!-- <a class="img-resp" href="./images/member4.jpg" data-fancybox="group1" data-caption="member" > -->
+                                <img class="img-resp" src="./images/member4.jpg" alt="">
+                                <h2 class="member-name align">Oscar</h2>
+                            </a>
                         </li>
                         <li class="member-item">
-                            <img class="img-resp" src="./images/member5.jpg" alt="">
-                            <h2 class="member-name align">Toast</h2>
+                            <!-- <a class="img-resp" href="./images/member5.jpg" data-fancybox="group1" data-caption="member" > -->
+                                <img class="img-resp" src="./images/member5.jpg" alt="">
+                                <h2 class="member-name align">Andy</h2>
+                            </a>
                         </li>
                         <li class="member-item">
-                            <img class="img-resp" src="./images/member6.jpg" alt="">
-                            <h2 class="member-name align">Toast</h2>
+                            <!-- <a class="img-resp" href="./images/member6.jpg" data-fancybox="group1" data-caption="member" > -->
+                                <img class="img-resp" src="./images/member6.jpg" alt="">
+                                <h2 class="member-name align">Qstone</h2>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -96,11 +100,7 @@
                 <div class="slide-head linebot-head">
                     <h2 class="linebot-title title">line-bot</h2>
                     <p class="linebot-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Arcu non odio euismod lacinia at quis. Hac habitasse platea
-                        dictumst quisque sagittis. Accumsan lacus vel facilisis volutpat est velit. Facilisi cras
-                        fermentum odio eu feugiat.
-                    </p>
+                        透過Line聊天機器人，可以將相同的流程建立成一套程序。<br>如此一來，每位使用者皆可在第一時間完成手續。<br>而遇到較複雜的問題，再透過其它服務的同學一對一回覆。 </p>
                     <i class="fa-brands fa-line"></i>
                     <i class="fa-solid fa-robot"></i>
                 </div>
@@ -113,6 +113,9 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+        integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
