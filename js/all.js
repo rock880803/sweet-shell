@@ -2,6 +2,13 @@ const $isMobile = $(window).width();
 const $Slide = $('#Slide');
 const $SlideLs = $('#SlideLs');
 const $NavItem = $('.nav-item > a');
+// Module
+const $slideDown = $('.container');
+const $floatbtn = $('.float-btn');
+const $shadow = $('.shadow');
+const $linebotItem = $('#linebotItem');
+let num = -2;
+// 
 const counts = {
     name1: "訊息傳送",
     data1: "10629",
@@ -15,7 +22,13 @@ const counts = {
     data5: "4566",
 };
 
-Object.keys(counts).forEach(function(key){
+// setting 
+$shadow.css({
+    'left':  $isMobile/2 -16, 
+});
+
+
+Object.keys(counts).forEach(function (key) {
     $(`[data-set=${key}]`).text(counts[key])
 });
 
@@ -41,4 +54,23 @@ $Slide.scroll(function () {
     console.log($(this).scrollTop());
 });
 
+setInterval(function () {
+    num < -2 ? num++ : num = -3
+    $floatbtn.css({
+        'margin-top': num+'%',
+    })
+    $shadow.css({
+        'opacity': num * 0.3 + 1.6 , 
+    })
+}, 800);
+
+$linebotItem.scroll(function(){
+    $(this).scrollTop() > 200 ? $slideDown.css({
+        'display': 'none',
+    }) :
+    $slideDown.css({
+        'display': 'block',
+    })
+    console.log( );
+});
 
