@@ -572,15 +572,5 @@ a {
     -webkit-transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
   }
-  .slide-down .shadow {
-    margin: auto;
-    width: 16px;
-    height: 5px;
-    margin-top: %;
-    background-color: #17171d;
-    border-radius: 50%;
-    -webkit-transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-    transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  }
 }
 /*# sourceMappingURL=all.css.map */
