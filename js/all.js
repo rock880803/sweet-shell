@@ -11,15 +11,15 @@ let num = -2;
 // 
 const counts = {
     name1: "訊息傳送",
-    data1: "10629",
+    data1: "10731",
     name2: "加入好友",
-    data2: "610",
+    data2: "613",
     name3: "活躍聊天室",
-    data3: "958",
+    data3: "972",
     name4: "接收的訊息",
-    data4: "8341",
+    data4: "8415",
     name5: "傳送的訊息",
-    data5: "4566",
+    data5: "4598",
 };
 
 // setting 

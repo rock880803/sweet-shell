@@ -15,7 +15,7 @@ a {
     text-decoration: none;
 }
 
-// help
+// tool
 .img-resp,
 .fancybox-image {
     max-width: 100%;
@@ -49,6 +49,19 @@ a {
     }
 }
 
+.decoration {
+    position: absolute;
+    bottom: 5%;
+    left: 1%;
+    z-index: -1;
+    opacity: .6;
+    font-size: 18px;
+    border-top: #fff 2px solid;
+    padding-top: 10px;
+    text-transform: capitalize;
+}
+
+
 // public
 
 // navigation
@@ -70,8 +83,19 @@ a {
     align-items: baseline;
 }
 
+.nav-item {
+    transition: all .3s;
+    &:hover {
+        transform:translateY(-20%);
+    }
+}
 .nav-item>a {
     color: #bbb;
+    transition: all .3s;
+    &:hover {
+        color: #fff;
+        transform: translateX(-50px);
+    }
 }
 
 .btn {
@@ -143,6 +167,10 @@ a {
 }
 
 // home
+// .home-item .decoration {
+//     bottom: 10%;
+//     left: 75%;
+// }
 
 .cover {
     width: 40%;
@@ -497,6 +525,16 @@ a {
 }
 
 @media screen and (max-width: 414px) {
+
+    // tool
+    .decoration {
+        border-width: 1px;
+        padding-top: 6px;
+        font-size: 16px;
+    }
+
+    // -----
+
     .nav-ls {
         width: 80%;
         font-size: 12px;
@@ -614,6 +652,6 @@ a {
             font-size: 16px;
             transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
         }
-       
+
     }
 }
