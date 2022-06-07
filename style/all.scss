@@ -33,37 +33,6 @@ a {
     align-items: center;
 }
 
-.preload-img {
-    font-size: 36px;
-    z-index: -1;
-
-    &::after {
-        content: "preload-img";
-        background-color: rgba(255, 255, 255, 0.1);
-        display: block;
-        text-align: center;
-        line-height: 100vh;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.decoration {
-    background-attachment: fixed;
-    position: absolute;
-    bottom: 5%;
-    left: 1%;
-    z-index: 1;
-    opacity: .6;
-    font-size: 18px;
-    border-top: #fff 2px solid;
-    padding-top: 10px;
-    text-transform: capitalize;
-    display: none;
-}
-
-
 // public
 
 // navigation
@@ -110,8 +79,6 @@ a {
     bottom: 5%;
     display: flex;
     right: 5%;
-    // margin: 0 auto;
-    // width: 100%;
     z-index: 1;
 
     a {
@@ -141,7 +108,6 @@ a {
     width: 100vw;
     height: 100vh;
     position: relative;
-
 }
 
 .slide-ls {
@@ -149,7 +115,7 @@ a {
     display: flex;
     flex-direction: row;
     // flex-wrap: wrap;
-    width: 400vw;
+    width: 500vw;
     height: 100vh;
     top: 0;
     transition: 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
@@ -180,15 +146,10 @@ a {
 .title {
     font-size: 48px;
     color: #fff;
-    padding: 15px 15px 15px 35px;
+    padding: 15px;
     text-transform: uppercase;
 }
 
-// home
-// .home-item .decoration {
-//     bottom: 10%;
-//     left: 75%;
-// }
 
 .cover {
     position: absolute;
@@ -250,32 +211,6 @@ a {
 }
 
 
-// .prev-arrow,
-// .next-arrow {
-//     position: absolute;
-//     top: 50%;
-//     font-size: 24px;
-//     border-radius: 50%;
-//     margin: 0 20px;
-//     width: 40px;
-//     height: 40px;
-//     transition: background-color .3s;
-//     color: rgba(255, 255, 255, 0.4);
-
-//     &:hover {
-//         color: #666;
-//         background-color: rgba(255, 255, 255, 0.7);
-//     }
-// }
-
-// .prev-arrow {
-//     left: 10px;
-// }
-
-// .next-arrow {
-//     right: 10px;
-// }
-
 // slide-about
 
 .about-head {
@@ -283,6 +218,7 @@ a {
     left: 15%;
     width: 30%;
     height: 60%;
+
 }
 
 .about-body {
@@ -290,6 +226,9 @@ a {
     left: 45%;
     width: 40%;
 
+    .title {
+        padding-left: 35px;
+    }
 
     .about-text {
         margin-top: -40px;
@@ -397,18 +336,37 @@ a {
     }
 }
 
+
+// results
+
+.result-head {
+    .title {
+        text-align: center;
+    }
+
+    top: 15%;
+    left: 35%;
+}
+
+.result-body {
+    top: 25%;
+    left: 20%;
+    width: 60%;
+}
+
 .ball-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 24px;
     margin: 3%;
-
-
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .data-ball {
-    background-color: #2e1842;
+    background-color: #1e1842;
     width: 44%;
     height: 10vw;
     flex-direction: column;
@@ -416,12 +374,12 @@ a {
     transition: all .6s;
 
     &:hover {
-        background-color: #663792;
+        background-color: #3d3792;
     }
 
     .data {
         // display: none;
-        color: #2e1842;
+        color: #1e1842;
         transition: all .6s;
         font-size: 36px;
 
@@ -436,6 +394,10 @@ a {
 .ball1 {
     width: 100%;
 }
+
+
+
+
 
 // Module
 
@@ -461,13 +423,12 @@ a {
 
 // js
 
-// .js-nav-btn a {
-//     // background-color: #fff;
-//     color: #fff;
-// }
-
 .js-img-scroll {
     transform: translateY(-70%);
+}
+
+.js-nav-btn>a {
+    color: #fff;
 }
 
 .js-nav {
@@ -482,13 +443,17 @@ a {
     .cover {
         top: 20%;
         left: 10%;
+        width: 80%;
+
         .title {
             h1 {
                 font-size: 80px;
             }
+
             h2 {
                 font-size: 60px;
             }
+
             h3 {
                 font-size: 48px;
             }
@@ -507,6 +472,7 @@ a {
         // margin-left: 10%;
         top: 30%;
         left: 10%;
+
         .title {
             // top: 35%;
             // left: 45%;
@@ -524,7 +490,7 @@ a {
 
     .member-item {
         width: 33.33%;
-        padding: 10px;
+        padding: 30px;
     }
 
     .linebot-head {
@@ -568,11 +534,7 @@ a {
 @media screen and (max-width: 414px) {
 
     // tool
-    .decoration {
-        border-width: 1px;
-        padding-top: 6px;
-        font-size: 16px;
-    }
+
 
     // -----
 

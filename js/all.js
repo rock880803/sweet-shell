@@ -28,10 +28,6 @@ const counts = {
     data5: "4708",
 };
 
-// setting 
-$shadow.css({
-    'left': $isMobile / 2 - 16,
-});
 
 
 Object.keys(counts).forEach(function (key) {
@@ -54,17 +50,8 @@ $NavItem.click(function () {
 });
 
 
-// $('#Next').click(function () {
-//     $SlideLs.css({
-//         left: '-100%'
-//     });
-//     $NavItem.parent().eq(1).addClass('js-nav-btn')
-//         .siblings().removeClass('js-nav-btn');
-// });
-
 $SlideItem.scroll(function () {
-    $(this).scrollTop() > 100 ? $Nav.addClass('js-nav') : $Nav.removeClass('js-nav')
-    
+    $(this).scrollTop() > 100 ? $Nav.addClass('js-nav') : $Nav.removeClass('js-nav')   
     console.log($(this).scrollTop());
 });
 
@@ -88,7 +75,7 @@ $linebotItem.scroll(function () {
 
 // arrow
 $nextArrow.click(function () {
-    pageNum < 4 ? pageNum++ : pageNum = 4;
+    pageNum < 5 ? pageNum++ : pageNum = 1;
     $NavItem.eq(pageNum - 1).parent().addClass('js-nav-btn').siblings().removeClass('js-nav-btn');
     $SlideLs.css({
         left: - (pageNum - 1) * 100 + '%',
@@ -96,7 +83,7 @@ $nextArrow.click(function () {
 
 });
 $prevArrow.click(function () {
-    pageNum > 1 ? pageNum-- : pageNum = 1;
+    pageNum > 1 ? pageNum-- : pageNum = 5;
     $NavItem.eq(pageNum - 1).parent().addClass('js-nav-btn').siblings().removeClass('js-nav-btn');
     $SlideLs.css({
         left: - (pageNum - 1) * 100 + '%',
