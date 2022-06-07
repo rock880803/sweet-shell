@@ -50,6 +50,7 @@ a {
 }
 
 .decoration {
+    background-attachment: fixed;
     position: absolute;
     bottom: 5%;
     left: 1%;
@@ -59,6 +60,7 @@ a {
     border-top: #fff 2px solid;
     padding-top: 10px;
     text-transform: capitalize;
+    display: none;
 }
 
 
@@ -73,7 +75,8 @@ a {
     z-index: 1;
     font-size: 18px;
     text-transform: uppercase;
-    margin-top: 15px;
+    padding: 15px 0 10px;
+    transition: all 1s;
 }
 
 .nav-ls {
@@ -106,10 +109,11 @@ a {
     position: fixed;
     bottom: 5%;
     display: flex;
-    right: 5% ;
+    right: 5%;
     // margin: 0 auto;
     // width: 100%;
     z-index: 1;
+
     a {
         display: block;
         width: 20px;
@@ -118,12 +122,15 @@ a {
         background-size: 300%;
         background-repeat: no-repeat;
     }
+
     .prev-arrow {
         background-position: 0 0;
     }
+
     .home-arrow {
         background-position: -20px 0;
     }
+
     .next-arrow {
         background-position: -40px 0;
     }
@@ -184,14 +191,26 @@ a {
 // }
 
 .cover {
-    width: 40%;
-    margin-top: 10%;
-    margin-left: 20%;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    // margin-top: 20%;
+    // margin-left: 20%;
+    img {
+        width: 40%;
+    }
 
     .title {
+        // position: absolute;
+        // top: 35%;
+        // left: 55%;
         position: absolute;
-        top: 35%;
-        left: 55%;
+        top: 30%;
+        left: 37%;
 
         h2 {
             font-size: 24px;
@@ -442,32 +461,55 @@ a {
 
 // js
 
-.js-nav-btn a {
-    // background-color: #fff;
-    color: #fff;
-}
+// .js-nav-btn a {
+//     // background-color: #fff;
+//     color: #fff;
+// }
 
 .js-img-scroll {
     transform: translateY(-70%);
 }
 
+.js-nav {
+    // background-color: #17171dee;
+    background-color: #0a0a0cee;
+}
+
 // RWD
 
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1200px) {
 
-@media screen and (max-width: 1024px) {
+    .cover {
+        top: 20%;
+        left: 10%;
+        .title {
+            h1 {
+                font-size: 80px;
+            }
+            h2 {
+                font-size: 60px;
+            }
+            h3 {
+                font-size: 48px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
     .nav-ls {
         width: 70%;
         font-size: 16px;
     }
 
     .cover {
-
-        margin-left: 10%;
-
+        // margin-top: 35%;
+        // margin-left: 10%;
+        top: 30%;
+        left: 10%;
         .title {
-            top: 15%;
-            left: 45%;
+            // top: 35%;
+            // left: 45%;
         }
     }
 
@@ -546,10 +588,10 @@ a {
     }
 
     .cover {
-        margin-top: 50%;
+        // margin-top: 50%;
 
         .title {
-            margin-top: 20%;
+            margin-top: -5%;
 
             h1 {
                 padding: 6px 0;

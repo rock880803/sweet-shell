@@ -55,6 +55,7 @@ a {
 }
 
 .decoration {
+  background-attachment: fixed;
   position: absolute;
   bottom: 5%;
   left: 1%;
@@ -64,6 +65,7 @@ a {
   border-top: #fff 2px solid;
   padding-top: 10px;
   text-transform: capitalize;
+  display: none;
 }
 
 .nav {
@@ -73,7 +75,9 @@ a {
   z-index: 1;
   font-size: 18px;
   text-transform: uppercase;
-  margin-top: 15px;
+  padding: 15px 0 10px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .nav-ls {
@@ -194,15 +198,25 @@ a {
 }
 
 .cover {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+}
+
+.cover img {
   width: 40%;
-  margin-top: 10%;
-  margin-left: 20%;
 }
 
 .cover .title {
   position: absolute;
-  top: 35%;
-  left: 55%;
+  top: 30%;
+  left: 37%;
 }
 
 .cover .title h2 {
@@ -428,26 +442,39 @@ a {
   transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
-.js-nav-btn a {
-  color: #fff;
-}
-
 .js-img-scroll {
   -webkit-transform: translateY(-70%);
           transform: translateY(-70%);
 }
 
-@media screen and (max-width: 1024px) {
+.js-nav {
+  background-color: #0a0a0cee;
+}
+
+@media screen and (min-width: 1200px) {
+  .cover {
+    top: 20%;
+    left: 10%;
+  }
+  .cover .title h1 {
+    font-size: 80px;
+  }
+  .cover .title h2 {
+    font-size: 60px;
+  }
+  .cover .title h3 {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
   .nav-ls {
     width: 70%;
     font-size: 16px;
   }
   .cover {
-    margin-left: 10%;
-  }
-  .cover .title {
-    top: 15%;
-    left: 45%;
+    top: 30%;
+    left: 10%;
   }
   .about-body {
     width: 40%;
@@ -509,11 +536,8 @@ a {
     position: static;
     height: 40px;
   }
-  .cover {
-    margin-top: 50%;
-  }
   .cover .title {
-    margin-top: 20%;
+    margin-top: -5%;
   }
   .cover .title h1 {
     padding: 6px 0;

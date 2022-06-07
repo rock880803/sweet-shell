@@ -1,14 +1,15 @@
 const $isMobile = $(window).width();
 const $Slide = $('#Slide');
 const $SlideLs = $('#SlideLs');
-const $Nav = $('.nav');
+const $Nav = $('#Nav');
 const $NavItem = $('.nav-item > a');
+const $SlideItem = $('.slide-item');
 const $prevArrow = $('#prevArrow');
 const $homeArrow = $('#homeArrow');
 const $nextArrow = $('#nextArrow');
 let pageNum = 1;
 // Module
-const $slideDown = $('.container');
+const $slideDown = $('.slide-down .container');
 const $floatbtn = $('.float-btn');
 const $shadow = $('.shadow');
 const $linebotItem = $('#linebotItem');
@@ -43,6 +44,10 @@ $NavItem.click(function () {
     $(this).parent().addClass('js-nav-btn').siblings().removeClass('js-nav-btn');
     $SlideLs.css({
         left: - $(this).parent().index() * 100 + '%',
+        top: 0,
+    })
+    $SlideItem.css({
+        top: 0,
     })
     num = $(this).parent().index() +1;
     // console.log(num)
@@ -57,7 +62,9 @@ $NavItem.click(function () {
 //         .siblings().removeClass('js-nav-btn');
 // });
 
-$Slide.scroll(function () {
+$SlideItem.scroll(function () {
+    $(this).scrollTop() > 100 ? $Nav.addClass('js-nav') : $Nav.removeClass('js-nav')
+    
     console.log($(this).scrollTop());
 });
 
@@ -65,9 +72,6 @@ setInterval(function () {
     num < -2 ? num++ : num = -3
     $floatbtn.css({
         'margin-top': num + '%',
-    })
-    $shadow.css({
-        'opacity': num * 0.3 + 1.6,
     })
 }, 800);
 
