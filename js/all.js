@@ -7,7 +7,7 @@ const $SlideItem = $('.slide-item');
 const $prevArrow = $('#prevArrow');
 const $homeArrow = $('#homeArrow');
 const $nextArrow = $('#nextArrow');
-const $gallery = $('.member-item > a')
+const $gallery = $('[data-fancybox="gallery"]')
 let pageNum = 1;
 // Module
 const $slideDown = $('.slide-down .container');
@@ -92,25 +92,14 @@ function pageSet() {
 
 
 
-// $gallery.fancybox({
-//     loop: true,
-//     keyboard: true,
-//     animationDuration: 500,
-//     transitionDuration: 800,
-//     buttons: [
-//         'zoom',
-//         'share',
-//         'download',
-//         'slideShow',
-//         'thumbs',
-//         'close',
-//     ],
-//     media: {
-//         youtube: {
-//             params: {
-//                 autoplay: false,
-//             }
-//         }
-//     }
-// });
-
+$gallery.fancybox({
+    loop: true,
+    keyboard: true,
+    animationDuration: 500,
+    transitionDuration: 800,
+    buttons: [
+        'zoom',
+        'slideShow',
+        'close',
+    ],
+});
