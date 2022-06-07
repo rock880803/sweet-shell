@@ -1,7 +1,12 @@
 const $isMobile = $(window).width();
 const $Slide = $('#Slide');
 const $SlideLs = $('#SlideLs');
+const $Nav = $('.nav');
 const $NavItem = $('.nav-item > a');
+const $prevArrow = $('#prevArrow');
+const $homeArrow = $('#homeArrow');
+const $nextArrow = $('#nextArrow');
+let pageNum = 1;
 // Module
 const $slideDown = $('.container');
 const $floatbtn = $('.float-btn');
@@ -11,20 +16,20 @@ let num = -2;
 // 
 const counts = {
     name1: "訊息傳送",
-    data1: "10731",
+    data1: "11022",
     name2: "加入好友",
-    data2: "613",
+    data2: "621",
     name3: "活躍聊天室",
-    data3: "972",
+    data3: "985",
     name4: "接收的訊息",
-    data4: "8415",
+    data4: "8173",
     name5: "傳送的訊息",
-    data5: "4598",
+    data5: "4708",
 };
 
 // setting 
 $shadow.css({
-    'left':  $isMobile/2 -16, 
+    'left': $isMobile / 2 - 16,
 });
 
 
@@ -37,18 +42,20 @@ $NavItem.parent().eq(0).addClass('js-nav-btn');
 $NavItem.click(function () {
     $(this).parent().addClass('js-nav-btn').siblings().removeClass('js-nav-btn');
     $SlideLs.css({
-        top: - $(this).parent().index() * 100 + '%',
+        left: - $(this).parent().index() * 100 + '%',
     })
+    num = $(this).parent().index() +1;
+    // console.log(num)
 });
 
 
-$('#Next').click(function () {
-    $SlideLs.css({
-        top: '-100%'
-    });
-    $NavItem.parent().eq(1).addClass('js-nav-btn')
-        .siblings().removeClass('js-nav-btn');
-});
+// $('#Next').click(function () {
+//     $SlideLs.css({
+//         left: '-100%'
+//     });
+//     $NavItem.parent().eq(1).addClass('js-nav-btn')
+//         .siblings().removeClass('js-nav-btn');
+// });
 
 $Slide.scroll(function () {
     console.log($(this).scrollTop());
@@ -57,20 +64,46 @@ $Slide.scroll(function () {
 setInterval(function () {
     num < -2 ? num++ : num = -3
     $floatbtn.css({
-        'margin-top': num+'%',
+        'margin-top': num + '%',
     })
     $shadow.css({
-        'opacity': num * 0.3 + 1.6 , 
+        'opacity': num * 0.3 + 1.6,
     })
 }, 800);
 
-$linebotItem.scroll(function(){
+$linebotItem.scroll(function () {
     $(this).scrollTop() > 200 ? $slideDown.css({
-        'display': 'none',
+        'opacity': '0',
     }) :
-    $slideDown.css({
-        'display': 'block',
+        $slideDown.css({
+            'opacity': '1',
+        })
+        $Nav.addClass()
+});
+
+
+// arrow
+$nextArrow.click(function () {
+    pageNum < 4 ? pageNum++ : pageNum = 4;
+    $NavItem.eq(pageNum - 1).parent().addClass('js-nav-btn').siblings().removeClass('js-nav-btn');
+    $SlideLs.css({
+        left: - (pageNum - 1) * 100 + '%',
     })
-    console.log( );
+
+});
+$prevArrow.click(function () {
+    pageNum > 1 ? pageNum-- : pageNum = 1;
+    $NavItem.eq(pageNum - 1).parent().addClass('js-nav-btn').siblings().removeClass('js-nav-btn');
+    $SlideLs.css({
+        left: - (pageNum - 1) * 100 + '%',
+    })
+
+});
+$homeArrow.click(function () {
+    pageNum = 1;
+    $NavItem.eq(pageNum - 1).parent().addClass('js-nav-btn').siblings().removeClass('js-nav-btn');
+    $SlideLs.css({
+        left: - (pageNum - 1) * 100 + '%',
+    })
 });
 
