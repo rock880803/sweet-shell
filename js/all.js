@@ -7,6 +7,7 @@ const $SlideItem = $('.slide-item');
 const $prevArrow = $('#prevArrow');
 const $homeArrow = $('#homeArrow');
 const $nextArrow = $('#nextArrow');
+const $gallery = $('.member-item > a')
 let pageNum = 1;
 // Module
 const $slideDown = $('.slide-down .container');
@@ -28,8 +29,6 @@ const counts = {
     data5: "4708",
 };
 
-
-
 Object.keys(counts).forEach(function (key) {
     $(`[data-set=${key}]`).text(counts[key])
 });
@@ -37,21 +36,14 @@ Object.keys(counts).forEach(function (key) {
 $NavItem.parent().eq(0).addClass('js-nav-btn');
 
 $NavItem.click(function () {
-    $(this).parent().addClass('js-nav-btn').siblings().removeClass('js-nav-btn');
-    $SlideLs.css({
-        left: - $(this).parent().index() * 100 + '%',
-        top: 0,
-    })
-    $SlideItem.css({
-        top: 0,
-    })
-    num = $(this).parent().index() +1;
-    // console.log(num)
+    pageNum = $(this).parent().index() + 1;
+    pageSet()
+
 });
 
 
 $SlideItem.scroll(function () {
-    $(this).scrollTop() > 100 ? $Nav.addClass('js-nav') : $Nav.removeClass('js-nav')   
+    $(this).scrollTop() > 100 ? $Nav.addClass('js-nav') : $Nav.removeClass('js-nav')
     console.log($(this).scrollTop());
 });
 
@@ -69,32 +61,56 @@ $linebotItem.scroll(function () {
         $slideDown.css({
             'opacity': '1',
         })
-        $Nav.addClass()
 });
 
 
 // arrow
 $nextArrow.click(function () {
     pageNum < 5 ? pageNum++ : pageNum = 1;
-    $NavItem.eq(pageNum - 1).parent().addClass('js-nav-btn').siblings().removeClass('js-nav-btn');
-    $SlideLs.css({
-        left: - (pageNum - 1) * 100 + '%',
-    })
-
+    pageSet()
 });
 $prevArrow.click(function () {
     pageNum > 1 ? pageNum-- : pageNum = 5;
-    $NavItem.eq(pageNum - 1).parent().addClass('js-nav-btn').siblings().removeClass('js-nav-btn');
-    $SlideLs.css({
-        left: - (pageNum - 1) * 100 + '%',
-    })
-
+    pageSet()
 });
 $homeArrow.click(function () {
     pageNum = 1;
+    pageSet()
+});
+
+
+
+function pageSet() {
     $NavItem.eq(pageNum - 1).parent().addClass('js-nav-btn').siblings().removeClass('js-nav-btn');
+    $NavItem.eq(pageNum - 1).find('span').html('<i class="fa-solid fa-hands-holding-circle fa-bounce">')
+    $NavItem.eq(pageNum - 1).parent().siblings().find('span').html('')
     $SlideLs.css({
         left: - (pageNum - 1) * 100 + '%',
     })
-});
+}
+
+
+
+
+// $gallery.fancybox({
+//     loop: true,
+//     keyboard: true,
+//     animationDuration: 500,
+//     transitionDuration: 800,
+//     buttons: [
+//         'zoom',
+//         'share',
+//         'download',
+//         'slideShow',
+//         'thumbs',
+//         'close',
+//     ],
+//     media: {
+//         youtube: {
+//             params: {
+//                 autoplay: false,
+//             }
+//         }
+//     }
+// });
 

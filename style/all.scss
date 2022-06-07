@@ -244,7 +244,8 @@ a {
 
 // slide-member
 
-.member-head {
+.member-head,
+.result-head {
     top: 15%;
     margin-left: 0;
     margin-right: 0;
@@ -345,7 +346,6 @@ a {
     }
 
     top: 15%;
-    left: 35%;
 }
 
 .result-body {
@@ -366,20 +366,20 @@ a {
 }
 
 .data-ball {
-    background-color: #1e1842;
+    background-color: #21214b;
     width: 44%;
-    height: 10vw;
+    height: 8vw;
     flex-direction: column;
     margin: 3%;
     transition: all .6s;
 
     &:hover {
-        background-color: #3d3792;
+        background-color: #2e367c;
     }
 
     .data {
         // display: none;
-        color: #1e1842;
+        color: #21214b;
         transition: all .6s;
         font-size: 36px;
 
@@ -579,7 +579,7 @@ a {
     .title {
         font-size: 24px;
         color: #fff;
-        padding: 15px 15px 15px 25px;
+        padding: 15px;
         text-transform: uppercase;
     }
 
@@ -590,6 +590,10 @@ a {
     .about-body {
         top: 25%;
         overflow: scroll;
+
+        .title {
+            padding: 15px 15px 15px 25px;
+        }
 
         .about-text {
             top: 25px;
@@ -636,6 +640,23 @@ a {
         }
     }
 
+
+
+
+
+    .member-item {
+        padding: 10px;
+    }
+
+    .result-head {
+        .title {
+            padding: 15px;
+        }
+    }
+    .result-body {
+        left: 10%;
+        width: 80%;
+    }
     .ball-group {
         font-size: 14px;
 

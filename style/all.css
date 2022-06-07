@@ -254,7 +254,8 @@ a {
   text-align: justify;
 }
 
-.member-head {
+.member-head,
+.result-head {
   top: 15%;
   margin-left: 0;
   margin-right: 0;
@@ -356,7 +357,6 @@ a {
 
 .result-head {
   top: 15%;
-  left: 35%;
 }
 
 .result-head .title {
@@ -386,9 +386,9 @@ a {
 }
 
 .data-ball {
-  background-color: #1e1842;
+  background-color: #21214b;
   width: 44%;
-  height: 10vw;
+  height: 8vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -399,11 +399,11 @@ a {
 }
 
 .data-ball:hover {
-  background-color: #3d3792;
+  background-color: #2e367c;
 }
 
 .data-ball .data {
-  color: #1e1842;
+  color: #21214b;
   -webkit-transition: all .6s;
   transition: all .6s;
   font-size: 36px;
@@ -549,7 +549,7 @@ a {
   .title {
     font-size: 24px;
     color: #fff;
-    padding: 15px 15px 15px 25px;
+    padding: 15px;
     text-transform: uppercase;
   }
   .about-head {
@@ -558,6 +558,9 @@ a {
   .about-body {
     top: 25%;
     overflow: scroll;
+  }
+  .about-body .title {
+    padding: 15px 15px 15px 25px;
   }
   .about-body .about-text {
     top: 25px;
@@ -593,6 +596,16 @@ a {
   }
   .linebot-other .title {
     margin-top: 50%;
+  }
+  .member-item {
+    padding: 10px;
+  }
+  .result-head .title {
+    padding: 15px;
+  }
+  .result-body {
+    left: 10%;
+    width: 80%;
   }
   .ball-group {
     font-size: 14px;

@@ -9,6 +9,7 @@
         integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="./style/all.css">
     <link rel="icon" href="./images/bitbug_favicon.ico">
     <title>台科小蛤蜊 | Sweet Shell</title>
@@ -19,19 +20,19 @@
         <nav class="nav align" id="Nav">
             <ul class="nav-ls">
                 <li class="nav-item">
-                    <a href="javascript:;">home</a>
+                    <a href="javascript:;"><span><i class="fa-solid fa-hands-holding-circle fa-bounce"></i></span> home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="javascript:;">about</a>
+                    <a href="javascript:;"><span></span> about</a>
                 </li>
                 <li class="nav-item">
-                    <a href="javascript:;">service</a>
+                    <a href="javascript:;"><span></span> service</a>
                 </li>
                 <li class="nav-item">
-                    <a href="javascript:;">results</a>
+                    <a href="javascript:;"><span></span> results</a>
                 </li>
                 <li class="nav-item">
-                    <a href="javascript:;">team</a>
+                    <a href="javascript:;"><span></span> team</a>
                 </li>
             </ul>
         </nav>
@@ -84,22 +85,17 @@
                 <div class="slide-body linebot-body mask">
                     <img class="img-resp" src="./images/linebot.jpg" alt="">
                 </div>
-                <div class="slide-down">
-                    <div class="container">
-                        <!-- <div class="shadow align"></div> -->
+                <!-- <div class="slide-down">
+                    <div class="container">                        
                         <a class="align float-btn" href="javascript:;">
                             <i class="fa-solid fa-angle-down"></i>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </section>
             <section class="slide-item" id="resultItem">
                 <div class="slide-head result-head">
-
-                    <h2 class="title align" id="Analysis">analysis</h2>
-                    <br>
-                    
-
+                    <h2 class="title align">analysis</h2>
                 </div>
                 <div class="slide-body result-body mask">
                     <div class="ball-group">
@@ -122,28 +118,40 @@
                 </div>
                 <div class="slide-body member-body">
                     <ul class="member-ls">
-                        <li class="member-item">
-                            <img class="img-resp" src="./images/member1.jpg" alt="">
+                                               <li class="member-item">
+                            <a href="./images/member1.jpg" data-fancybox="group1" data-caption="">
+                                <img class="img-resp" src="./images/member1.jpg" alt="">
+                            </a>
                             <h2 class="member-name align">Toast</h2>
                         </li>
                         <li class="member-item">
-                            <img class="img-resp" src="./images/member2.jpg" alt="">
+                            <a href="./images/member2.jpg" data-fancybox="group1" data-caption="">
+                                <img class="img-resp" src="./images/member2.jpg" alt="">
+                            </a>
                             <h2 class="member-name align">Alan</h2>
                         </li>
                         <li class="member-item">
-                            <img class="img-resp" src="./images/member3.jpg" alt="">
+                            <a href="./images/member3.jpg" data-fancybox="group1" data-caption="">
+                                <img class="img-resp" src="./images/member3.jpg" alt="">
+                            </a>
                             <h2 class="member-name align">Claire</h2>
                         </li>
                         <li class="member-item">
-                            <img class="img-resp" src="./images/member4.jpg" alt="">
+                            <a href="./images/member4.jpg" data-fancybox="group1" data-caption="">
+                                <img class="img-resp" src="./images/member4.jpg" alt="">
+                            </a>
                             <h2 class="member-name align">Oscar</h2>
                         </li>
                         <li class="member-item">
-                            <img class="img-resp" src="./images/member5.jpg" alt="">
+                            <a href="./images/member5.jpg" data-fancybox="group1" data-caption="">
+                                <img class="img-resp" src="./images/member5.jpg" alt="">
+                            </a>
                             <h2 class="member-name align">Andy</h2>
                         </li>
                         <li class="member-item">
-                            <img class="img-resp" src="./images/member6.jpg" alt="">
+                            <a href="./images/member6.jpg" data-fancybox="group1" data-caption="">
+                                <img class="img-resp" src="./images/member6.jpg" alt="">
+                            </a>
                             <h2 class="member-name align">Qstone</h2>
                         </li>
                     </ul>
