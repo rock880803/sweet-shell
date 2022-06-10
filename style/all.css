@@ -714,6 +714,21 @@ a {
   .intro-item {
     height: 30vh;
   }
+  .instruction .instruction-mask {
+    height: 40vh;
+  }
+  .instruction .instruction-item {
+    height: 40vh;
+  }
+  .instruction .instruction-head {
+    height: 60%;
+  }
+  .instruction .instruction-head .img-resp {
+    width: 60%;
+  }
+  .instruction .instruction-body p {
+    font-size: 20px;
+  }
   .cover {
     top: 30%;
     left: 10%;
@@ -773,12 +788,42 @@ a {
     position: static;
     height: 40px;
   }
+  .lang-item {
+    width: 15%;
+  }
   .intro-item {
     width: 100%;
     margin-bottom: 5%;
   }
   .intro-item-info {
     padding-bottom: 10%;
+  }
+  .instruction .instruction-mask {
+    height: 40vh;
+    width: 60vw;
+  }
+  .instruction .container {
+    margin: 0 10vw;
+  }
+  .instruction .instruction-item {
+    height: 40vh;
+    width: 60vw;
+  }
+  .instruction .instruction-head {
+    height: 70%;
+  }
+  .instruction .instruction-head .img-resp {
+    margin-top: 20%;
+    width: 60%;
+  }
+  .instruction .instruction-body p {
+    font-size: 12px;
+    line-height: 1rem;
+  }
+  .instruction .instruction-arrow {
+    bottom: -50%;
+    width: 80vw;
+    margin: 0 -10vw;
   }
   .cover .title {
     margin-top: -5%;

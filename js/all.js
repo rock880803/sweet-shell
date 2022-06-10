@@ -1,4 +1,4 @@
-const $isMobile = $(window).width();
+const $mobileWidth = $(window).width();
 const $Slide = $('#Slide');
 const $SlideLs = $('#SlideLs');
 const $Nav = $('#Nav');
@@ -91,25 +91,39 @@ const $insPrevArrow = $('#insPrevArrow');
 const $insNextArrow = $('#insNextArrow');
 
 
-
 let insNum = 1;
 $insNextArrow.click(function () {
     insNum < 12 ? insNum++ : insNum = 12;
-    $instructionStep.text('step'+ insNum);
+    $instructionStep.text('step' + insNum);
     insPageSet()
 });
 $insPrevArrow.click(function () {
     insNum > 1 ? insNum-- : insNum = 1;
-    $instructionStep.text('step'+ insNum);
+    $instructionStep.text('step' + insNum);
     insPageSet()
 });
 
-
-function insPageSet() {
-    $instructionLs.css({
-        top: - (insNum - 1) * 30 + 'vw',
-    })
+if ($mobileWidth > 1200) {
+    function insPageSet() {
+        $instructionLs.css({
+            top: - (insNum - 1) * 30 + 'vw',
+        })
+    }
+} else if ($mobileWidth > 414) {
+    function insPageSet() {
+        $instructionLs.css({
+            top: - (insNum - 1) * 40 + 'vh',
+        })
+    }
+} else {
+    function insPageSet() {
+        $instructionLs.css({
+            top: - (insNum - 1) * 40 + 'vh',
+        })
+    }
 }
+
+
 function pageSet() {
     $NavItem.eq(pageNum - 1).parent().addClass('js-nav-btn').siblings().removeClass('js-nav-btn');
     $NavItem.eq(pageNum - 1).find('span.icon').html('<i class="fa-solid fa-hands-holding-circle fa-bounce">')
