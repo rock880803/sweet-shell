@@ -452,8 +452,10 @@ a {
     .instruction-arrow {
         position: absolute;
         bottom: 5%;
-        right: 5%;
+        width: 50vw;
+        margin:  0 -5vw;
         display: flex;
+        justify-content: space-between;
         z-index: 1;
 
         a {
@@ -495,7 +497,6 @@ a {
 .instruction-ls {
     position: relative;
     display: flex;
-    // width: 120vw;
     flex-wrap: wrap;
     flex-direction: row;
     top: 0;

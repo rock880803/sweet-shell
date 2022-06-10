@@ -94,7 +94,7 @@ const $insNextArrow = $('#insNextArrow');
 
 let insNum = 1;
 $insNextArrow.click(function () {
-    insNum < 13 ? insNum++ : insNum = 13;
+    insNum < 12 ? insNum++ : insNum = 12;
     $instructionStep.text('step'+ insNum);
     insPageSet()
 });

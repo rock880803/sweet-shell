@@ -423,10 +423,14 @@ a {
 .instruction .instruction-arrow {
   position: absolute;
   bottom: 5%;
-  right: 5%;
+  width: 50vw;
+  margin: 0 -5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   z-index: 1;
 }
 
