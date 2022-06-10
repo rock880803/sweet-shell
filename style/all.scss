@@ -541,6 +541,9 @@ a {
             font-size: 24px;
             line-height: 2rem;
             margin: 0 5%;
+        }
+
+        p.cn {
             text-align: justify;
         }
 
@@ -751,23 +754,44 @@ a {
 
     .instruction {
         .instruction-mask {
+            width: 50vw;
             height: 40vh;
         }
 
+        .container {
+            width: 50%;
+            margin: 0 20%;
+        }
+
         .instruction-item {
+            display: flex;
+            width: 50vw;
             height: 40vh;
         }
 
         .instruction-head {
+            width: 60%;
             height: 60%;
+
 
             .img-resp {
                 width: 60%;
+                margin: 30%;
             }
         }
 
-        .instruction-body p {
-            font-size: 20px;
+        .instruction-body {
+            width: 30%;
+            margin: auto 0;
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .instruction-arrow {
+
+            width: 60vw;
         }
     }
 
@@ -846,9 +870,12 @@ a {
         position: static;
         height: 40px;
     }
+
     .lang-item {
-        width: 15%;;
+        width: 15%;
+        ;
     }
+
     .intro-item {
         width: 100%;
         margin-bottom: 5%;
@@ -873,17 +900,22 @@ a {
         }
 
         .instruction-item {
+            display: block;
             height: 40vh;
             width: 60vw;
         }
 
         .instruction-head {
-            height: 70%;
+            height: 60%;
 
             .img-resp {
-                margin-top: 20%;
-                width: 60%;
+                margin: 25% 43%;
+                width: 80%;
             }
+        }
+
+        .instruction-body {
+            margin: 0;
         }
 
         .instruction-body p {
